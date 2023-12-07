@@ -14,7 +14,8 @@ void loop()
   int result = 0;
   result = summe(zahl1, zahl2);
 
-  Serial.println("Summe von " + String(zahl1) + " und " + String(zahl2) + " ist" + String(result));
+  Serial.println("Summe von " + String(zahl1) + " und " + String(zahl2) + " ist " + String(result));
+  delay(2000);
 }
 
 int summe(int x, int y)
