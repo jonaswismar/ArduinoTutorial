@@ -1,0 +1,46 @@
+Treiber für Controller Interface
+https://www.roboter-bausatz.de/projekte/ch340-treiber-fuer-arduino-klone-installieren
+
+Visual Studio Code:
+https://code.visualstudio.com/download
+
+PlatformIO:
+https://docs.platformio.org/en/latest/
+
+Chip Dokumentation:
+https://www.wemos.cc/en/latest/d1/d1_mini.html
+
+ESP Cores:
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+ESP Tool:
+https://github.com/espressif/esptool
+https://www.youtube.com/watch?v=jrpbQAdQNv8&t=115s
+
+Wemos D1 Mini Deep Sleep Bug:
+https://github.com/esp8266/Arduino/issues/6318
+
+Elektronik Grundlagen:
+https://ohmslawcalculator.com/voltage-divider-calculator
+
+Arduino Core Tutorial:
+https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
+
+Weitere Tutorials:
+https://www.tutorialspoint.com/arduino
+https://www.roboter-bausatz.de/projekte
+https://diyi0t.com/
+https://www.electronicwings.com/
+
+Projekte:
+https://projecthub.arduino.cc/AntoineKia/interactive-led-table-for-50-ce1352
+https://github.com/SpacehuhnTech/esp8266_deauther
+https://github.com/p3tr0s/PhiSiFi
+
+
+https://app.arduino.cc/
+https://github.com/esp8266/Arduino/tree/master/libraries/esp8266/examples/LowPowerDemo
+
+https://piolabs.com/
+https://community.platformio.org/
