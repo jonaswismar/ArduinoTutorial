@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-int pushButton = 2;
+int pushButton = D5;
 
 void setup()
 {

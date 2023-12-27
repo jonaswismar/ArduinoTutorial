@@ -32,6 +32,7 @@ https://www.tutorialspoint.com/arduino
 https://www.roboter-bausatz.de/projekte
 https://diyi0t.com/
 https://www.electronicwings.com/
+https://randomnerdtutorials.com/
 
 Projekte:
 https://projecthub.arduino.cc/AntoineKia/interactive-led-table-for-50-ce1352

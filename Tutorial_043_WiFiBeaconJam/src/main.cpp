@@ -7,7 +7,7 @@ extern "C"
 #include "user_interface.h"
 }
 
-String alfa = "1234567890qwertyuiopasdfghjkklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM_";
+String alfa = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ ";
 byte channel;
 
 // Beacon Packet buffer
@@ -34,7 +34,7 @@ void setup()
 
 void loop()
 {
-  // Randomize channel //
+  // Randomize channel
   channel = random(1, 12);
   wifi_set_channel(channel);
 

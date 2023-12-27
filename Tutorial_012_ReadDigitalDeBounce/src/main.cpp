@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-const int buttonPin = 2;
+const int buttonPin = D5;
 const int ledPin = LED_BUILTIN;
 
 int ledState = HIGH;
