@@ -72,16 +72,16 @@ void loop()
                         client.println("Connection: close");
                         client.println();
 
-                        // turns the GPIOs on and off
+                        // turns the LED_BUILTINon and off
                         if (header.indexOf("GET /led/on") >= 0)
                         {
-                            Serial.println("GPIO led on");
+                            Serial.println("LED_BUILTIN led on");
                             outputState = "on";
                             digitalWrite(LED_BUILTIN, HIGH);
                         }
                         else if (header.indexOf("GET /led/off") >= 0)
                         {
-                            Serial.println("GPIO led off");
+                            Serial.println("LED_BUILTIN led off");
                             outputState = "off";
                             digitalWrite(LED_BUILTIN, LOW);
                         }
