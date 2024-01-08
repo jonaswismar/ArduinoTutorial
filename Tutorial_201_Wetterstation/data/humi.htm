@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Feuchtigkeit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="fr-header">
+			<h1>Feuchtigkeit</h1>
+		</div>
+		<div %H_HUMISOIL%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/feucht_boden.png">
+			</div>
+			<div class="fr-col">
+				<p>Feuchtigkeit (Boden)</p>
+				<h2>%HUMISOIL%%%</h2>
+			</div>
+		</div>
+		<div %H_HUMIAIR%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/feucht_luft.png">
+			</div>
+			<div class="fr-col">
+				<p>Feuchtigkeit (Luft)</p>
+				<h2>%HUMIAIR%%%</h2>
+			</div>
+		</div>
+		<div %H_HUMIABSOL%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/feucht_luft.png">
+			</div>
+			<div class="fr-col">
+				<p>Feuchtigkeit (Absolut)</p>
+				<h2>%HUMIABSOL%g/m3</h2>
+			</div>
+		</div>
+	</body>
+</html>

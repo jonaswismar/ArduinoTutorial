@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wetterstation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="http://daheim.jonaswismar.de/wetter/fav/sonne.ico">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>Wetterstation</h1>
+		</div>
+		<div class="row" style="max-width:1500px;">
+			<div class="col-2 col-s-2 menu">
+				<ul>
+					<li>
+						<a href="start.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/other/haus.png"></img>Startseite
+						</a>
+					</li>
+					<li>
+						<a href="temp.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/other/therm.png"></img>Temperatur
+						</a>
+					</li>
+					<li>
+						<a href="humi.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/other/feucht_luft.png"></img>Feuchtigkeit
+						</a>
+					</li>
+					<li>
+						<a href="air.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/other/windsack.png"></img>Wind
+						</a>
+					</li>
+					<li>
+						<a href="rain.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/weather/sturm_s.png"></img>Gewitter
+						</a>
+					</li>
+					<li>
+						<a href="loc.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/other/marker.png"></img>Standort
+						</a>
+					</li>
+					<li>
+						<a href="sun.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/weather/sonne.png"></img>Sonne
+						</a>
+					</li>
+					<li>
+						<a href="moon.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/moon/neumond.png"></img>Mond
+						</a>
+					</li>
+					<li>
+						<a href="time.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/season/3.png"></img>Zeit
+						</a>
+					</li>
+					<li>
+						<a href="prog.htm" target="content">
+							<img src="http://daheim.jonaswismar.de/wetter/other/forecast.png"></img>Prognose
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-10 col-s-10">
+				<iframe name="content" src="start.htm" width="100%%" height="700px" style="border:none;"></iframe>
+			</div>
+		</div>
+		<div class="footer">
+			<p><strong>Version: </strong>%SYSVERSION%<strong>, Vom: </strong>%SYSBUILDON%<strong>, ESP Core: </strong>%SYSESPCORE%</p>
+		</div>
+	</body>
+</html>

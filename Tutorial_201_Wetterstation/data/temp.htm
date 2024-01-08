@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Temperatur</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="fr-header">
+			<h1>Temperatur</h1>
+		</div>
+		<div %H_TEMPAIR% class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/therm.png">
+			</div>
+			<div class="fr-col">
+				<p>Temperatur (Luft)</p>
+				<h2>%TEMPAIR%&deg;C</h2>
+			</div>
+		</div>
+		<div %H_TEMPSOIL%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/therm.png">
+			</div>
+			<div class="fr-col">
+				<p>Temperatur (Boden)</p>
+				<h2>%TEMPSOIL%&deg;C</h2>
+			</div>
+		</div>
+		<div %H_DEWPOINT%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/taupunkt.png">
+			</div>
+			<div class="fr-col">
+				<p>Taupunkt</p>
+				<h2>%DEWPOINT%&deg;C</h2>
+			</div>
+		</div>
+		<div %H_WINDCHILL%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/windchill.png">
+			</div>
+			<div class="fr-col">
+				<p>Windk&uuml;hle</p>
+				<h2>%WINDCHILL%&deg;C</h2>
+			</div>
+		</div>
+	</body>
+</html>

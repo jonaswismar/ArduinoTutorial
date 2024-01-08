@@ -1,0 +1,43 @@
+#include <Arduino.h>
+
+// Sensor Status
+boolean statusBmp = false;
+boolean statusTsl = false;
+boolean statusVeml = false;
+boolean statusDht = false;
+boolean statusMoist = false;
+
+
+
+
+// Sensor Results
+float m_temperatureBmp = 0;
+float m_pressureBmp = 0;
+float m_altitudeBmp = 0;
+float m_lightTsl = 0;
+int m_uvVeml = 0;
+float m_temperatureDht = 0;
+float m_humidityDht = 0;
+float m_humidityEarth = 0;
+float m_windDirection = 0;
+
+// Calculated Results
+float c_dewPoint = 0;
+float c_windChill = 0;
+float c_windBeaufort = 0;
+float c_windFujita = 0;
+float c_windEFujita = 0;
+float c_windTorro = 0;
+float c_rainFall = 0;
+float c_windSpeed = 0;
+//c_ozon
+//c_co2
+//c_dayTime;
+//c_Season;
+
+// Polled Results
+//p_sunRise;
+//p_sunSet;
+//p_moonRise;
+//p_moonSet;
+//p_sunHours;

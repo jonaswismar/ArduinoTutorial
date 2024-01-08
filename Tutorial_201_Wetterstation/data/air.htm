@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wind</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="fr-header">
+			<h1>Wind</h1>
+		</div>
+		<div %H_AIRPRESSURE%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/druck.png">
+			</div>
+			<div class="fr-col">
+				<p>Luftdruck</p>
+				<h2>%AIRPRESSURE% hPa</h2>
+			</div>
+		</div>
+		<div %H_AIRSPEED%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/windmesser.png">
+			</div>
+			<div class="fr-col">
+				<p>Windgeschwindigkeit</p>
+				<h2>%AIRSPEED% km/h</h2>
+			</div>
+		</div>
+		<div %H_AIRPOWER%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/windsack.png">
+			</div>
+			<div class="fr-col">
+				<p>Windst&auml;rke</p>
+				<h2>%AIRPOWER% Bft</h2>
+			</div>
+		</div>
+		<div %H_AIRDIRECTION%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/direction/%AIRDIRECTIONIMAGE%.png">
+			</div>
+			<div class="fr-col">
+				<p>Windrichtung</p>
+				<h2>%AIRDIRECTION%</h2>
+			</div>
+		</div>
+		<div %H_AIRDIRECTIONDEGREE%class="fr-row">
+			<div class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/other/windrose.png">
+			</div>
+			<div class="fr-col">
+				<p>Windrichtung&deg;</p>
+				<h2>%AIRDIRECTIONDEGREE%&deg;</h2>
+			</div>
+		</div>
+	</body>
+</html>
