@@ -9,7 +9,7 @@
 
 #include "server\asyncwebserver.h"
 #include "time\ntptimeclient.h"
-#include "client\sunrise.h"
+#include "web\sunrise.h"
 
 #include "sensor\anemometer.h"
 #include "sensor\ads1115.h"
@@ -54,5 +54,20 @@ void loop()
 {
     updateNTPTimeClient();
     updateSunrise();
+    Serial.println(getAds1Status());
+    Serial.println(getBmp1Status());
+    Serial.println(getDht1Status());
+    Serial.println(getTsl1Status());
+    Serial.println(getVemlStatus());
+    Serial.println("-------");
+
+    readAds1();
+    readAnemo();
+    readBmp1();
+    readDht1();
+    readTsl1();
+    readVane();
+    readVeml();
+    
     delay(5000);
 }

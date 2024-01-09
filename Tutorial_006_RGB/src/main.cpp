@@ -19,14 +19,35 @@ void loop()
     analogWrite(redPin, luminance);
     delay(timer);
   }
+
   for (int luminance = 0; luminance <= 255; luminance++)
   {
-    analogWrite(redPin, luminance);
+    analogWrite(greenPin, luminance);
     delay(greenPin);
   }
+
   for (int luminance = 0; luminance <= 255; luminance++)
   {
-    analogWrite(redPin, luminance);
+    analogWrite(bluePin, luminance);
     delay(bluePin);
+  }
+
+  
+  for (int luminance = 255; luminance >= 0; luminance--)
+  {
+    analogWrite(redPin, luminance);
+    delay(timer);
+  }
+  
+  for (int luminance = 255; luminance >= 0; luminance--)
+  {
+    analogWrite(greenPin, luminance);
+    delay(greenPin);
+  }
+  
+  for (int luminance = 255; luminance >= 0; luminance--)
+  {
+    analogWrite(bluePin, luminance);
+    delay(timer);
   }
 }

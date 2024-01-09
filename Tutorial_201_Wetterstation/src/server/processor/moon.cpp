@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-#include "client\moonphase.h"
-#include "client\moonrise.h"
+#include "api\moonphase.h"
+#include "api\moonrise.h"
 #include "location\location.h"
 #include "const.h"
 

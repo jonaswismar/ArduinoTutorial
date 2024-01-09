@@ -5,6 +5,7 @@
 #include "sensor\anemometer.h"
 #include "sensor\bmp280.h"
 #include "sensor\vane.h"
+#include "text\htmlsigns.h"
 #include "const.h"
 
 String processorAir(const String &var)
@@ -27,7 +28,7 @@ String processorAir(const String &var)
     }
     else if (var == "AIRDIRECTION")
     {
-        return getWindDirectionString(getVaneDirection());
+        return replaceHTMLSigns(getWindDirectionString(getVaneDirection()));
     }
     else if (var == "AIRDIRECTIONDEGREE")
     {

@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+#include "math\temperature.h"
 #include "sensor\anemometer.h"
 #include "sensor\bmp280.h"
 #include "sensor\dht22.h"
@@ -9,7 +10,7 @@ String processorTemp(const String &var)
 {
     if (var == "TEMPAIR")
     {
-        return "";
+        return String(getBmp1Temperature());
     }
     else if (var == "TEMPSOIL")
     {
@@ -17,11 +18,11 @@ String processorTemp(const String &var)
     }
     else if (var == "DEWPOINT")
     {
-        return "";
+        return String(calculateDewPoint(getBmp1Temperature(), getDht1Humidity()));
     }
     else if (var == "WINDCHILL")
     {
-        return "";
+        return String(calculateWindChill(getBmp1Temperature(), getAnemoSpeed()));
     }
     else if (var == "H_TEMPAIR")
     {

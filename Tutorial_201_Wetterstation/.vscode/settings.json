@@ -11,6 +11,7 @@
         "Freitag",
         "Frühling",
         "Fujita",
+        "Hecto",
         "Herbst",
         "Januar",
         "Juli",
@@ -20,6 +21,8 @@
         "Mittag",
         "Mittwoch",
         "Montag",
+        "MOONPHASE",
+        "MOONPHASEIMAGE",
         "Nachmittag",
         "Nacht",
         "Oktober",
@@ -28,6 +31,12 @@
         "SEASONIMAGE",
         "Sommer",
         "Sonntag",
+        "SUNBB",
+        "SUNHELL",
+        "SUNIR",
+        "SUNLENGTH",
+        "SUNNOON",
+        "SUNUV",
         "Vormittag"
     ]
 }

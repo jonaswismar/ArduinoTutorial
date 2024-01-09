@@ -4,8 +4,8 @@
 
 #include "const.h"
 
-const String unitHectoPascal = "hPa";
 const String unitPascal = "Pa";
+const String unitHectoPascal = "hPa";
 const String unitAtmosphere = "atm";
 const String unitTorr = "Torr";
 const String unitMercury = "mmHg";
