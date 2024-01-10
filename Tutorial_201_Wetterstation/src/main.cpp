@@ -7,20 +7,19 @@
 #include <ESP8266mDNS.h>
 #include <ESP8266WiFi.h>
 
-#include "server\asyncwebserver.h"
-#include "time\ntptimeclient.h"
-#include "web\sunrise.h"
-
+#include "credentials.h"
 #include "sensor\anemometer.h"
 #include "sensor\ads1115.h"
+#include "sensor\ads1115\humidity.h"
+#include "sensor\ads1115\thermistor.h"
 #include "sensor\bmp280.h"
 #include "sensor\dht22.h"
 #include "sensor\tsl2561.h"
 #include "sensor\vane.h"
 #include "sensor\veml6070.h"
-
-const char *ssid = "HighSecurity";
-const char *password = "1337leet";
+#include "server\asyncwebserver.h"
+#include "time\ntptimeclient.h"
+#include "web\sunrise.h"
 
 void setup()
 {
@@ -62,6 +61,8 @@ void loop()
     Serial.println("-------");
 
     readAds1();
+    readAdsHumidity();
+    readAdsTemperature();
     readAnemo();
     readBmp1();
     readDht1();

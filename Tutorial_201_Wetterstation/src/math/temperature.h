@@ -4,6 +4,7 @@
 
 void setUnitTemperature(int);
 int getUnitTemperature();
+float calculateSteinhartHart(float, float, float, float);
 float calculateDewPoint(float, float);
 float calculateWindChill(float, float);
 float convertCelsiusToFahrenheit(float);

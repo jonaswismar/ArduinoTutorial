@@ -19,6 +19,18 @@ int getUnitTemperature()
     return unitTemperature;
 }
 
+float calculateSteinhartHart(float resistance, float resistance_nominal, float bcoefficient, float temperature_nominal)
+{
+    float steinhart;
+    steinhart = resistance / resistance_nominal;
+    steinhart = log(steinhart);
+    steinhart /= bcoefficient;
+    steinhart += 1.0 / (temperature_nominal + 273.15);
+    steinhart = 1.0 / steinhart;
+    steinhart -= 273.15;
+    return steinhart;
+}
+
 /*
 Die Formel zur Berechnung ist:
 Temperatur über 0 ° C: k2=17.62, k3=243.12

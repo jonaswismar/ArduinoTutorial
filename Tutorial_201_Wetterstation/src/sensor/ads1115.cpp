@@ -133,6 +133,86 @@ void readAds4()
     }
 }
 
+float getAds1Volts1()
+{
+    return ads1volts1;
+}
+
+float getAds1Volts2()
+{
+    return ads1volts2;
+}
+
+float getAds1Volts3()
+{
+    return ads1volts3;
+}
+
+float getAds1Volts4()
+{
+    return ads1volts4;
+}
+
+float getAds2Volts1()
+{
+    return ads2volts1;
+}
+
+float getAds2Volts2()
+{
+    return ads2volts2;
+}
+
+float getAds2Volts3()
+{
+    return ads2volts3;
+}
+
+float getAds2Volts4()
+{
+    return ads2volts4;
+}
+
+float getAds3Volts1()
+{
+    return ads3volts1;
+}
+
+float getAds3Volts2()
+{
+    return ads3volts2;
+}
+
+float getAds3Volts3()
+{
+    return ads3volts3;
+}
+
+float getAds3Volts4()
+{
+    return ads3volts4;
+}
+
+float getAds4Volts1()
+{
+    return ads4volts1;
+}
+
+float getAds4Volts2()
+{
+    return ads4volts2;
+}
+
+float getAds4Volts3()
+{
+    return ads4volts3;
+}
+
+float getAds4Volts4()
+{
+    return ads4volts4;
+}
+
 boolean getAds1Status()
 {
     return statusAds1;

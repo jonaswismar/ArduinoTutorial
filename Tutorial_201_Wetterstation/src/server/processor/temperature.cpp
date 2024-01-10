@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 #include "math\temperature.h"
+#include "sensor\ads1115\thermistor.h"
 #include "sensor\anemometer.h"
 #include "sensor\bmp280.h"
 #include "sensor\dht22.h"
@@ -14,7 +15,7 @@ String processorTemp(const String &var)
     }
     else if (var == "TEMPSOIL")
     {
-        return "";
+        return String(getAdsTemperature());
     }
     else if (var == "DEWPOINT")
     {

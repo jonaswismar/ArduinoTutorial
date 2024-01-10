@@ -14,6 +14,9 @@
 
 AsyncWebServer server(80);
 
+const char *http_username = "admin";
+const char *http_password = "admin";
+
 static const char TEXT_CSS[] PROGMEM = "text/css";
 static const char TEXT_PLAIN[] PROGMEM = "text/plain";
 static const char TEXT_HTML[] PROGMEM = "text/html";
@@ -52,6 +55,11 @@ void initWebserver()
               { request->send(SPIFFS, "/time.htm", String(), false, processorTime); });
     server.on("/air.htm", HTTP_GET, [](AsyncWebServerRequest *request)
               { request->send(SPIFFS, "/air.htm", String(), false, processorAir); });
+
+    server.on("/tools.htm", HTTP_GET, [](AsyncWebServerRequest *request)
+              {  if(!request->authenticate(http_username, http_password))
+      return request->requestAuthentication();
+      request->send(SPIFFS, "/tools.htm", FPSTR(TEXT_HTML)); });
 
     server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
               { request->send(SPIFFS, "/style.css", FPSTR(TEXT_CSS)); });

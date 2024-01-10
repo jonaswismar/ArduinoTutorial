@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 #include "math\humidity.h"
+#include "sensor\ads1115\humidity.h"
 #include "sensor\bmp280.h"
 #include "sensor\dht22.h"
 #include "const.h"
@@ -9,7 +10,7 @@ String processorHumi(const String &var)
 {
     if (var == "HUMISOIL")
     {
-        return "";
+        return String(getAdsHumidity());
     }
     else if (var == "HUMIAIR")
     {
@@ -21,7 +22,7 @@ String processorHumi(const String &var)
     }
     else if (var == "H_HUMIAIR")
     {
-        if(getDht1Status())
+        if (getDht1Status())
         {
             return "";
         }
@@ -32,7 +33,7 @@ String processorHumi(const String &var)
     }
     else if (var == "H_HUMIABSOL")
     {
-        if(getBmp1Status()&&getDht1Status())
+        if (getBmp1Status() && getDht1Status())
         {
             return "";
         }
