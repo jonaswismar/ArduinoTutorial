@@ -21,8 +21,6 @@ WiFiClient client;
 void setup()
 {
   Serial.begin(9600);
-  while (!Serial)
-    delay(100); // wait for native usb
   Serial.println(F("BMP280 test"));
   unsigned status;
   // status = bmp.begin(BMP280_ADDRESS_ALT, BMP280_CHIPID);

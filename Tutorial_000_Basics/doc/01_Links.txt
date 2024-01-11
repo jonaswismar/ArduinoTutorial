@@ -23,6 +23,7 @@ https://github.com/esp8266/Arduino/issues/6318
 
 Elektronik Grundlagen:
 https://ohmslawcalculator.com/voltage-divider-calculator
+https://www.studiopieters.nl/esp8266-voltage-divider/
 
 Arduino Core Tutorial:
 https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
@@ -45,3 +46,8 @@ https://github.com/esp8266/Arduino/tree/master/libraries/esp8266/examples/LowPow
 
 https://piolabs.com/
 https://community.platformio.org/
+
+
+
+Python für Visual Studio Code unter Linux:
+sudo apt-get install python3-venv

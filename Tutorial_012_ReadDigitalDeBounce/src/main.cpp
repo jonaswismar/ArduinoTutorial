@@ -1,9 +1,9 @@
 #include <Arduino.h>
 
-const int buttonPin = D5;
-const int ledPin = LED_BUILTIN;
+const int pushButton = D8;
+const int ledPin = D5;
 
-int ledState = HIGH;
+int ledState = LOW;
 int buttonState;
 int lastButtonState = LOW;
 
@@ -12,15 +12,15 @@ unsigned long debounceDelay = 50;
 
 void setup()
 {
-  pinMode(buttonPin, INPUT);
+  Serial.begin(9600);
+  pinMode(pushButton, INPUT);
   pinMode(ledPin, OUTPUT);
-
   digitalWrite(ledPin, ledState);
 }
 
 void loop()
 {
-  int reading = digitalRead(buttonPin);
+  int reading = digitalRead(pushButton);
 
   if (reading != lastButtonState)
   {
@@ -31,6 +31,7 @@ void loop()
   {
     if (reading != buttonState)
     {
+      Serial.println(buttonState);
       buttonState = reading;
 
       if (buttonState == HIGH)

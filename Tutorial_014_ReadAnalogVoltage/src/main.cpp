@@ -9,7 +9,7 @@ void loop()
 {
   int sensorValue = analogRead(A0);
   Serial.println(sensorValue);
-  float voltage = map(sensorValue, 0, 1024, 0, 3.3);
+  float voltage = map(sensorValue, 0, 1024, 0, 3);
   Serial.println(voltage);
   delay(1000);
 }

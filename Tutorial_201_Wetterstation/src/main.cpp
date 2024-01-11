@@ -21,6 +21,9 @@
 #include "time\ntptimeclient.h"
 #include "web\sunrise.h"
 
+unsigned long previousMillis = 0;
+unsigned long interval = 30000;
+
 void setup()
 {
     Serial.begin(115200);
@@ -51,6 +54,16 @@ void setup()
 
 void loop()
 {
+    unsigned long currentMillis = millis();
+    // if WiFi is down, try reconnecting
+    if ((WiFi.status() != WL_CONNECTED) && (currentMillis - previousMillis >= interval))
+    {
+        Serial.print(millis());
+        Serial.println("Reconnecting to WiFi...");
+        WiFi.disconnect();
+        WiFi.reconnect();
+        previousMillis = currentMillis;
+    }
     updateNTPTimeClient();
     updateSunrise();
     Serial.println(getAds1Status());
@@ -69,6 +82,6 @@ void loop()
     readTsl1();
     readVane();
     readVeml();
-    
+
     delay(5000);
 }

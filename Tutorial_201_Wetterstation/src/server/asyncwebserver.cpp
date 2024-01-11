@@ -2,6 +2,7 @@
 
 #include <ESPAsyncTCP.h>
 #include <ESPAsyncWebServer.h>
+// #include <WebSerial.h>
 
 #include "server\processor\air.h"
 #include "server\processor\humidity.h"
@@ -21,6 +22,17 @@ static const char TEXT_CSS[] PROGMEM = "text/css";
 static const char TEXT_PLAIN[] PROGMEM = "text/plain";
 static const char TEXT_HTML[] PROGMEM = "text/html";
 static const char IMAGE_PNG[] PROGMEM = "image/png";
+
+/*void recvMsg(uint8_t *data, size_t len)
+{
+    WebSerial.println("Received Data...");
+    String d = "";
+    for (int i = 0; i < len; i++)
+    {
+        d += char(data[i]);
+    }
+    WebSerial.println(d);
+}*/
 
 void initWebserver()
 {
@@ -57,12 +69,27 @@ void initWebserver()
               { request->send(SPIFFS, "/air.htm", String(), false, processorAir); });
 
     server.on("/tools.htm", HTTP_GET, [](AsyncWebServerRequest *request)
-              {  if(!request->authenticate(http_username, http_password))
-      return request->requestAuthentication();
-      request->send(SPIFFS, "/tools.htm", FPSTR(TEXT_HTML)); });
+              { 
+                    if(!request->authenticate(http_username, http_password))
+                    {
+                        return request->requestAuthentication();
+                    }
+                    request->send(SPIFFS, "/tools.htm", FPSTR(TEXT_HTML)); });
+
+    server.on("/tools/reboot", HTTP_GET, [](AsyncWebServerRequest *request)
+              {
+                  if (!request->authenticate(http_username, http_password))
+                  {
+                      return request->requestAuthentication();
+                  }
+                  request->send(200, "text/plain", "ok");
+                  ESP.restart(); });
 
     server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
               { request->send(SPIFFS, "/style.css", FPSTR(TEXT_CSS)); });
+
+    // WebSerial.begin(&server);
+    // WebSerial.msgCallback(recvMsg);
 
     server.begin();
 }

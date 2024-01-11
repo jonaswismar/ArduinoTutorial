@@ -7,7 +7,7 @@
 // #define VRY_PIN A1
 #define VRY_PIN A0
 #define ADC_MIN 0
-#define ADC_MAX 1023
+#define ADC_MAX 1024
 #define AXES_DEVIATION 100
 
 Joystick *joystick;
