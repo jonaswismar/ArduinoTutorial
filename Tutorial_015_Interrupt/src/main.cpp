@@ -1,34 +1,44 @@
 #include <Arduino.h>
 
-int pushButton = D6;
-int ledPin = D5;
+const int pushButton = D7;
+const int ledPin = D5;
 
-volatile int ledStatus = LOW;
+int ledState = LOW;
+volatile int buttonFlag;
+int lastButtonState = LOW;
 
-void unserInterruptHandler()
+unsigned long lastDebounceTime = 0;
+const unsigned long debounceDelay = 50;
+
+IRAM_ATTR void ISR_button()
 {
-  ledStatus = !ledStatus;
-  digitalWrite(ledPin, ledStatus);
+  buttonFlag = 1;
 }
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(pushButton, INPUT);
+  pinMode(pushButton, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  // D5, D6, D7
-  attachInterrupt(digitalPinToInterrupt(pushButton), unserInterruptHandler, RISING);
+  attachInterrupt(digitalPinToInterrupt(pushButton), ISR_button, CHANGE);
 }
 
 void loop()
 {
-  int buttonState = digitalRead(pushButton);
-  if (buttonState == HIGH)
+  if (millis() - lastDebounceTime > debounceDelay && buttonFlag)
   {
-    digitalWrite(ledPin, HIGH);
-  }
-  else
-  {
-    digitalWrite(ledPin, LOW);
+    lastDebounceTime = millis();
+    if (digitalRead(pushButton) == 0 && lastButtonState == 1)
+    {
+      ledState = !ledState;
+      Serial.println(ledState);
+      digitalWrite(ledPin, ledState);
+      lastButtonState = 0;
+    }
+    else if (digitalRead(pushButton) == 1 && lastButtonState == 0)
+    {
+      lastButtonState = 1;
+    }
+    buttonFlag = 0;
   }
 }

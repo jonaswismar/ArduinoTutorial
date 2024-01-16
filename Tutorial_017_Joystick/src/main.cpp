@@ -2,7 +2,7 @@
 #include <Joystick.h>
 #include <AxisJoystick.h>
 
-#define SW_PIN D0
+#define SW_PIN D1
 #define VRX_PIN A0
 // #define VRY_PIN A1
 #define VRY_PIN A0

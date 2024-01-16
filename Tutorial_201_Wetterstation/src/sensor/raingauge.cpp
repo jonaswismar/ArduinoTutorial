@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 boolean statusRainGauge = false;
-const int pinRainGauge = D5;
+const int pinRainGauge = D6;
 float m_rainVolume = 0;
 
 volatile int m_rainInterruptCounter = 0;
@@ -24,7 +24,7 @@ void initRainGauge()
     statusRainGauge = true;
 }
 
-void readAnemo()
+void readRainGauge()
 {
     if (millis() - lastRainGaugeTime >= 1000)
     {

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 boolean statusAnemo = false;
-const int pinAnemo = D4;
+const int pinAnemo = D5;
 float m_anemoSpeed = 0;
 float m_anemoGust = 0;
 

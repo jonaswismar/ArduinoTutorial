@@ -8,7 +8,7 @@ int buttonState;
 int lastButtonState = LOW;
 
 unsigned long lastDebounceTime = 0;
-unsigned long debounceDelay = 50;
+const unsigned long debounceDelay = 50;
 
 void setup()
 {
@@ -21,6 +21,7 @@ void setup()
 void loop()
 {
   int reading = digitalRead(pushButton);
+  Serial.println(reading);
 
   if (reading != lastButtonState)
   {

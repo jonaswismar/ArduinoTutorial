@@ -12,6 +12,7 @@ DHT_Unified dht1(D3, DHT22);
 
 void initDht1()
 {
+    pinMode(D3, INPUT);
     dht1.begin();
     statusDht1 = true;
 }

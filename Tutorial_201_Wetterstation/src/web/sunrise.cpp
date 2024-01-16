@@ -21,7 +21,7 @@ String ws_nautical_twilight_end = "";
 String ws_astronomical_twilight_begin = "";
 String ws_astronomical_twilight_end = "";
 
-const long intervalSunrise = 6000;
+const long intervalSunrise = 60000;
 unsigned long previousMillisSunrise = 0;
 
 String getSunriseJSON(String lat, String lng)

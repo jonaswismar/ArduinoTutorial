@@ -2,6 +2,6 @@
 
 void ICACHE_RAM_ATTR ISRRainGauge();
 void initRainGauge();
-void readAnemo();
+void readRainGauge();
 float getRainVolume();
 boolean getRainGaugeStatus();

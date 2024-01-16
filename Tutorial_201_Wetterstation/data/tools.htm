@@ -4,18 +4,52 @@
 		<title>Tools</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
+		<script>
+			function logoutButton() {
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "/logout", true);
+				xhr.send();
+				setTimeout(function(){ window.open("/start.htm","_self"); }, 1000);
+			}
+			function rebootButton() {
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "/reboot", true);
+				xhr.send();
+				setTimeout(function(){ window.open("/start.htm","_self"); }, 5000);
+			}
+		</script>
 	</head>
 	<body>
 		<div class="fr-header">
 			<h1>Tools</h1>
 		</div>
 		<div class="fr-row">
+			<button onclick="logoutButton()" class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/system/user-aendern.png">
+			</button>
 			<div class="fr-col">
-				<img src="http://daheim.jonaswismar.de/wetter/system/neustart.png">
+				<p>Logout</p>
+				<h2>Logout</h2>
 			</div>
+		</div>
+		<div class="fr-row">
+			<button onclick="rebootButton()" class="fr-col">
+				<img src="http://daheim.jonaswismar.de/wetter/system/neustart.png">
+			</button>
 			<div class="fr-col">
 				<p>Neustarten</p>
 				<h2>Neustarten</h2>
+			</div>
+		</div>
+		<div class="fr-row">
+			<div class="fr-col">
+				<a href="webserial" target="content">
+					<img src="http://daheim.jonaswismar.de/wetter/system/konsole.png">
+				</a>
+			</div>
+			<div class="fr-col">
+				<p>Serial</p>
+				<h2>Web Serial</h2>
 			</div>
 		</div>
 	</body>
