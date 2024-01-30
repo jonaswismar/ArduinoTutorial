@@ -25,7 +25,7 @@ void setup()
 
 void loop()
 {
-  if (millis() - lastDebounceTime > debounceDelay && buttonFlag)
+  if (millis() - lastDebounceTime > debounceDelay && buttonFlag == 1)
   {
     lastDebounceTime = millis();
     if (digitalRead(pushButton) == 0 && lastButtonState == 1)
